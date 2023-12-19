@@ -1,0 +1,12 @@
+<button class="btn btn-primary" (click)="onToggleDetails()">Toggle Details</button>
+<p *ngIf="showDetails">Secret Password = "Bugart"</p>`
+<p *ngIf="logs.length > 0">Logs</p>
+<ul>
+    <li
+    *ngFor="let log of logs"
+    [ngStyle]="{backgroundColor: log.id > 4 ? 'blue': ''}"
+    [ngClass]="{'white': log.id > 4}">
+        <span>ID {{ log.id }}</span>,&nbsp;
+        <span>date: {{ log.date }}</span>
+    </li>
+</ul>
